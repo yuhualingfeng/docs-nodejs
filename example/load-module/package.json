@@ -1,0 +1,11 @@
+{
+  "name": "load-module",
+  "version": "1.0.0",
+  "description": "load module",
+  "main": "\\",
+  "scripts": {
+    "test": "no"
+  },
+  "author": "puhuasheng",
+  "license": "ISC"
+}
