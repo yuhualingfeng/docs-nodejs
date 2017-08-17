@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-study",
+  "version": "1.0.0",
+  "description": "example for node modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuhualingfeng/nodejs-study.git"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "node-modules"
+  ],
+  "author": "puhuasheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuhualingfeng/nodejs-study/issues"
+  },
+  "homepage": "https://github.com/yuhualingfeng/nodejs-study#readme",
+  "devDependencies": {
+    "express": "^4.15.4",
+    "http-proxy-middleware": "^0.17.4"
+  }
+}

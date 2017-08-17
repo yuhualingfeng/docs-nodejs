@@ -3,5 +3,8 @@ print.printA();
 print.printB();
 console.log(print.pi);
 
-import Circle from './Circle'
+var Circle = require('./Circle');
+
+console.log(__dirname);
+
 console.log(Circle);
