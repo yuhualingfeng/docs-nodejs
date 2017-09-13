@@ -1,14 +1,14 @@
-#Nodejs
+# Nodejs
 
-##npm
+## npm
 npm是三位一体的系统,第三方包库、管理计算机中安装的包的机制、以及定义包依赖关系的标准。
 
-###npm工作模式	
+### npm工作模式	
 npm有两种工作模式：全局模式、本地模式
 	
-###npm包管理
+### npm包管理
 
-####安装包
+#### 安装包
 
 + 全局安装:`npm install -g sax`
 + `npm install \<package name\>`
@@ -19,38 +19,38 @@ npm有两种工作模式：全局模式、本地模式
 + `npm install sax@"<0.3"`
 + `npm install sax@">=0.1.1 <0.3.1"`
 
-####自动安装包
+#### 自动安装包
 
 以下两个命令可以自动下载和安装确实的`package.json`中依赖模块
 
 + `pm install`
 + `npm update`
 	
-####卸载包
+#### 卸载包
 
 + `npm uninstall \<package name\>`
 + `npm uninstall -g \<package name\>`
 	
-####更新包
+#### 更新包
 
 + `npm update \<package name\>`
 + `npm update -g \<package name\>`
 
 
 
-####获取帮助
+#### 获取帮助
 通过`npm help`命令可以获取帮助,如果需要获取更具体的某项帮助则需要更详细的命令,例如获取`install`命令的帮助用:`npm hlep install`.
 
 	
-###npm杂项
+### npm杂项
 
 一个包可能有一个和多个可执行文件，全局安装的可执行文件放在`/user/local/bin`目录中.本地安装放在`./node_modules/.bin`目录中.npm维护了一个公共包库，可通过 <http://www.npmjs.org> 来查看,安装包同时也会安装其依赖的包
 
-##加载模块
+## 加载模块
 
 `Nodejs`模块有三种类型:`核心模块`,`第三方模块`(通过npm安装),`自定义模块`.模块返回的是一个对象,该对象可能是任意的Javascript值,可以是一个函数,也可以是一个具有若干属性的对象,属性可以是函数,数组或其他类型的`Javascript`对象.
 
-###导出模块
+### 导出模块
 
 在Node中,`CommonJs`模块系统是文件之间共享对象或函数的唯一方式,文件和模块是一一对应的.
 
@@ -108,9 +108,9 @@ console.log(print.pi);
 
 ```
 
-###加载模块
+### 加载模块
 
-####加载核心模块
+#### 加载核心模块
 
 `Node`有一些以二进制形式发布的模块,这些模块被称为核心模块,直接通过模块名引用.
 
@@ -119,7 +119,7 @@ console.log(print.pi);
 var http = require('http');
 
 ```
-####加载文件模块
+#### 加载文件模块
 
 文件模块可以通过绝对路径和相对路径引用.
 
@@ -132,7 +132,7 @@ var myModule1 = require('../my_modules/myModule'); // 相对路径
 ```
 在这里文件模块的引用可以省略`.js`扩展名.
 
-####加载文件夹模块
+#### 加载文件夹模块
 
 ```javascript
 
@@ -141,7 +141,7 @@ var myModule = require('./myModuleDir');
 ```
 Node会假设这个文件夹是一个包,并试图查找包定义,包定义在`package.json`,如果文件夹中不包含`package.json`,则入口点会假定为默认值为`index.js`;如果包含`package.json`,则会查找`package.json`中的'main'属性值作为入口点.
 
-####从node_modules文件夹加载.
+#### 从node_modules文件夹加载.
 
 如果一个模块名既不是相对路径,也不是核心模块,那么Node就会尝试在当前目录下的`node_modules`文件夹中查找该模块,如果在当前目录下的`node_modules`下没找到,`Node`会继续往上查找,这个查找会持续到根目录(前提是没找到指定的模块).
 
@@ -149,7 +149,7 @@ Node会假设这个文件夹是一个包,并试图查找包定义,包定义在`p
 
 模块首次加载会被缓存起来,这意味着如果模块能被解析为相同的文件名,那么每次调用require都会确切的返回同一模块,而不会再去执行一次调用模块的代码.
 
-##http模块
+## http模块
 
 http模块用于构建`HTTP`服务器.HTTP是一个用来进行传输内容和引用程序的应用层协议,它将TCP用作传输协议,它也是万维网进行数据通信的基础.首选的应用程序部署方案之一就是在互联网上提供HTTP服务,来响应HTTP客户端的请求.
 
@@ -185,7 +185,7 @@ require('http').createServer(function(req,res){
 
 ```
 
-###http.ServerRequest对象
+### http.ServerRequest对象
 
 在监听request事件时,回调函数会得到一个http.ServerRequest对象作为第一个参数，这个对象包含3个属性:`url`,`method`,`headers`.
 
@@ -208,7 +208,7 @@ require('http').createServer(function(req,res){
 
 ```
 
-###http.ServerResponse对象
+### http.ServerResponse对象
 
 http.ServerResponse对象有以下方法
 
@@ -229,7 +229,7 @@ res.write('Hello');
 
 ```
 
-###举例
+### 举例
 
 实例1：构建提交静态文件的服务器
 
